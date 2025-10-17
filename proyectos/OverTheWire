@@ -1,0 +1,146 @@
+Mi experiencia con Bandit — Niveles 0 a 10
+
+Comencé a jugar OverTheWire Bandit porque quería entender mejor cómo moverme en la terminal y aprender comandos básicos de Linux de una forma práctica. Los primeros niveles fueron sencillos… hasta que llegué al nivel 12, donde las cosas se pusieron serias 😅.
+
+En este post comparto un pequeño resumen de lo que aprendí en los niveles 0 a 10 y también cómo fue toparme con un nivel que me hizo detenerme por un tiempo.
+
+ Niveles 0 a 10 — Aprendizajes reales
+ Nivel 0 — Conexión SSH
+Aprendí a conectarme a un servidor remoto por primera vez usando:
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+ Primer contacto real con SSH.
+
+ Nivel 1 — Leer archivos simples
+
+El reto fue encontrar la contraseña en un archivo llamado readme.
+Comandos:
+
+ls
+cat readme
+
+
+Aprendí a listar archivos y leer su contenido.
+Nivel 2 — Archivos con nombre -
+
+Los nombres con guiones pueden romper comandos, así que usé:
+
+cat ./-
+
+Aprendí a usar ./ para evitar que el nombre se interprete como opción.
+Nivel 3 — Archivos con espacios
+
+El archivo tenía espacios en su nombre, así que lo abrí así:
+
+cat "./--spaces in this filename--"
+
+Aprendí a usar comillas o \ para nombres raros.
+Nivel 4 — Encontrar el archivo correcto
+
+Había muchos archivos, solo uno legible:
+
+file *
+cat ./nombre_correcto
+
+Aprendí a identificar archivos de texto con file.
+Nivel 5 — Buscar archivos por tamaño
+
+Este nivel me enseñó a filtrar con find:
+
+find . -type f -size 1033c
+
+
+Primeros pasos para hacer búsquedas más específicas.
+Nivel 6 — Buscar por permisos y dueños
+
+La contraseña estaba en un archivo con usuario y grupo específicos:
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+
+Aprendí a buscar en todo el sistema y redirigir errores para no llenar la terminal.
+Nivel 7 — Buscar palabras dentro de un archivo
+
+Había que buscar una palabra específica:
+
+grep millionth data.txt
+
+
+grep = mejor amigo para buscar texto.
+Nivel 8 — Líneas únicas
+
+La contraseña era la única línea que aparecía una sola vez:
+
+sort data.txt | uniq -u
+
+
+sort y uniq sirven para detectar patrones.
+Nivel 9 — Filtrar cadenas legibles
+
+Dentro de un archivo binario, la clave estaba junto a varios =:
+
+strings data.txt | grep '='
+
+
+Aprendí a usar strings para leer binarios.
+Nivel 10 — Codificaciones (base64 / ROT13)
+
+Aquí ya empecé a usar comandos de decodificación:
+
+Base64:
+
+base64 -d data.txt
+
+
+ROT13:
+
+tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
+
+
+Aprendí a reconocer formatos de codificación comunes.
+Cuando las cosas se pusieron rudas — Nivel 12
+
+Después del nivel 10, las cosas dieron un salto en dificultad.
+El nivel 12 fue mi primera “pared”:
+
+El archivo era un hexdump
+Tenía bytes basura al inicio
+Y estaba comprimido varias veces (gzip → bzip2 → tar → …).
+
+Para resolverlo había que:
+
+Reconstruir el binario desde el hexdump.
+
+Saltar los bytes basura exactos.
+
+Descomprimir capa por capa, en orden.
+
+Identificar correctamente los formatos (file, xxd, etc.).
+
+No equivocarte… porque un solo paso mal obligaba a empezar desde cero .
+
+Y para hacerlo más entretenido… mi sesión SSH se desconectaba de vez en cuando, así que perdía mis archivos temporales y tenía que repetir todo. 
+
+No fue que no se pudiera hacer — de hecho, entendí mejor xxd, gunzip, bunzip2 y tar — pero fue el primer nivel que me hizo decir:
+
+“Ok… hoy ya no más. Mañana lo intento otra vez.” 
+
+Lo que me dejó todo esto
+
+Aprendí comandos esenciales de Linux:
+ls, cd, cat, find, grep, sort, uniq, strings, file, xxd, tar, gzip, bzip2.
+
+Entendí cómo buscar, filtrar y leer archivos con nombres raros, permisos especiales o formatos extraños.
+
+Descubrí que la frustración también enseña: si un paso sale mal, es parte del proceso.
+
+Y sobre todo: documentar lo que hago me ayuda a no repetir errores 
+
+Conclusión
+
+Si estás empezando con Bandit, los niveles 0 a 9 son súper buenos para agarrar base en Linux.
+El 10 ya te da una probadita de codificaciones, y el 12… bueno, te hace humilde .
+
+Esto no es una guía perfecta, sino un diario de aprendizaje real.
+Lo importante no es pasar todo de golpe, sino entender cada paso.
