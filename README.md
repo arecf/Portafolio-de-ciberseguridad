@@ -83,4 +83,4 @@ Seguir aprendiendo sobre:
 ---
 
 📧 **Contacto**: 004020@sg.edu.mx  
-🌐 **LinkedIn**: [https://www.linkedin.com/in/areli-castillo-flores/]
+🌐 **LinkedIn**: https://www.linkedin.com/in/areli-castillo-flores/
