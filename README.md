@@ -26,7 +26,7 @@ Este repositorio es mi portafolio, donde documento lo que he aprendido y mis pro
 # Proyectos y laboratorios
 -  [Análisis de tráfico con Wireshark](proyectos/wireshark.md)  
 -  [Escaneo de redes con Nmap](proyectos/nmap.md)  
--  [Laboratorios OverTheWire](proyectos/OverTheWire.md). 
+-  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)  
 
 
