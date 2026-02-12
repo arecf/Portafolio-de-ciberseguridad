@@ -12,6 +12,8 @@ Entre el 11 y 12 de febrero de 2026 se recibieron múltiples correos electrónic
 > “Notificación de vencimiento”
 
 El mensaje incluía un archivo adjunto cifrado (PDF protegido con contraseña) y la contraseña era proporcionada dentro del cuerpo del correo.
+<img width="1512" height="674" alt="Captura4" src="https://github.com/user-attachments/assets/19bd217d-798c-43ff-9ec5-09a015498b0c" />
+
 
 Tras el análisis de los encabezados (headers), se confirmó que:
 
@@ -19,7 +21,7 @@ Tras el análisis de los encabezados (headers), se confirmó que:
 - DKIM: PASS  
 - DMARC: PASS  
 
-La IP de envío (23.83.210.23) pertenece a MailChannels Corporation, un servicio legítimo de relay SMTP.
+La IP de envío (23.83.xxx.xx) pertenece a MailChannels Corporation, un servicio legítimo de relay SMTP.
 
 Con base en la evidencia, el escenario más probable no es spoofing, sino un posible **compromiso de cuenta legítima (Account Takeover)**.
 
@@ -30,7 +32,7 @@ Con base en la evidencia, el escenario más probable no es spoofing, sino un pos
 | Campo | Valor |
 |--------|--------|
 | Asunto | 7259 - Notificación de vencimiento |
-| Remitente | almacen@bellaaurora.mx |
+| Remitente | almacen@belxxxxx.mx |
 | Adjunto | PDF cifrado |
 | Contraseña | Incluida en el cuerpo |
 | Hora de envío | 01:01 AM |
@@ -57,6 +59,7 @@ Esto indica que:
 - El mensaje no fue alterado en tránsito.
 
 ---
+<img width="865" height="508" alt="Captura3" src="https://github.com/user-attachments/assets/a30d6f67-2483-4eb4-aff9-356189316e64" />
 
 ## 3.2 Infraestructura de envío
 
@@ -68,7 +71,8 @@ La IP de origen corresponde a:
 
 Esto refuerza la hipótesis de uso de infraestructura legítima.
 
----
+---<img width="872" height="600" alt="Captura2" src="https://github.com/user-attachments/assets/61416fa1-4093-4ffc-8376-2ac162cd88d0" />
+
 
 ## 3.3 Indicadores de comportamiento sospechoso
 
@@ -86,4 +90,5 @@ El uso de archivos cifrados es una técnica común para evadir motores antivirus
 
 # 4. Hipótesis del Vector de Ataque
 
+<img width="628" height="823" alt="Captura" src="https://github.com/user-attachments/assets/7626d3f6-ea89-461b-bdd2-79b701bef100" />
 
