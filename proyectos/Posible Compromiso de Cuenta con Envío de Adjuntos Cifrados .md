@@ -1,6 +1,6 @@
 
 
-# Mini Reporte DFIR  
+# Reporte DFIR  
 ## Caso: Correo de “Notificación de vencimiento” con adjunto cifrado
 
 ---
