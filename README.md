@@ -1,88 +1,105 @@
-# Portafolio-de-ciberseguridad
-Portafolio de ciberseguridad de Areli Castillo – proyectos, laboratorios y aprendizajes
-#  Portafolio de Ciberseguridad – Areli Castillo
+# Portafolio de Ciberseguridad
 
-¡Hola!  Soy estudiante autodidacta interesada en la ciberseguridad.  
-Este repositorio es mi portafolio, donde documento lo que he aprendido y mis proyectos prácticos.
+Profesional en formación especializada en ciberseguridad, con enfoque en análisis técnico, investigación de amenazas y seguridad en infraestructuras modernas.
 
+Este repositorio documenta proyectos prácticos, laboratorios técnicos y análisis realizados como parte de mi desarrollo en seguridad ofensiva y defensiva.
 
-## Sobre mí
--  Estudiante de tecnologías de la información con interés en **ciberseguridad**.  
--  Áreas de interés:  
-- Hacking ético y pruebas de penetración  
-- Seguridad en la nube  
-- Análisis forense digital  
-- Seguridad en redes  
+---
 
+## Áreas de Especialización
 
-##  Herramientas y habilidades
-- **Sistemas**: Linux (Kali), Windows Server  
-- **Redes**: Wireshark, Nmap  
-- **Pentesting**: Burp Suite, Metasploit  
-- **Lenguajes**: Python, Bash, PowerShell  
-- **Cloud**: Google Cloud Security (IAM, Identity-Aware Proxy)  
+- Análisis de tráfico y monitoreo de red
+- Seguridad ofensiva (pentesting básico-intermedio)
+- Seguridad en la nube (Google Cloud)
+- Investigación y análisis de incidentes
+- Fundamentos de análisis forense digital
+
+---
+
+## Herramientas y Tecnologías
 
 
-# Proyectos y laboratorios
+### Sistemas Operativos
+- Linux (Kali / terminal)
+- Windows Server (fundamentos)
+
+### Administración y Acceso Seguro
+- SSH (configuración y acceso remoto en entornos Linux)
+- Gestión básica de usuarios y permisos en Linux
+
+### Monitoreo y Seguridad
+- Wazuh (monitoreo de eventos y análisis básico de logs)
+- Configuración básica de firewall en Linux
+
+### Redes
+- Fundamentos de redes (modelo OSI, TCP/IP)
+- Análisis básico de tráfico con Wireshark
+- Escaneo de red con Nmap (enumeración básica)
+
+### Seguridad en la Nube
+- Google Cloud IAM
+- Identity-Aware Proxy (IAP)
+- Control de accesos y principios de menor privilegio
+
+### Fundamentos Técnicos
+- Bash (uso en terminal)
+- Conceptos básicos de scripting
+
+
+---
+
+## Proyectos Técnicos
+
 -  [Análisis de tráfico con Wireshark](proyectos/wireshark.md)  
 -  [Escaneo de redes con Nmap](proyectos/nmap.md)  
 -  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)
 -  [Posible Compromiso de Cuenta](./proyectos/Posible%20Compromiso%20de%20Cuenta%20con%20Env%C3%ADo%20de%20Adjuntos%20Cifrados.md)
 
+---
 
+## Certificaciones y Formación
 
-##  Certificaciones y cursos
-Certified in Cybersecurity
-ISC2
+**ISC2**
+- Certified in Cybersecurity (CC)
 
-Fundamentos de Linux
-CISCO
+**Cisco Networking Academy**
+- Fundamentos de Linux
+- Networking Basics
+- Introduction to Cybersecurity
+- Cybersecurity Essentials
+- Introducción a Redes y Computación en la Nube
 
-Networking Basics
-CISCO
+**Microsoft**
+- Cybersecurity Threat Vectors and Mitigation
+- Introduction to Computers, OS and Security
+- Introduction to Networking and Cloud Computing
 
-Introduction to Cybersecurity
-CISCO
+**Google Cloud**
+- Elastic Google Cloud Infrastructure: Scaling and Automation
 
-Cybersecurity Essentials
-CISCO
-
-Introducción a Redes y Computación en la Nube
-CISCO
-
-Cybersecurity Threat Vectors and Mitigation
-Microsoft
-
-Introduction to Computers, Operating Systems and Security
-Microsoft
-
-Introduction to Networking and Cloud Computing
-Microsoft
-
-Elastic Google Cloud Infrastructure: Scaling and Automation
-Google
-
-Python Nivel Jr. 
-Pilares CDMX
-
-Introducción a OSINT
-
-Configuración de Firewall en Linux
-
-Tecnologías de Vigilancia y Espionaje: Herramientas y  Alcance
-
-Seguridad Digital con perspectiva de Género 
-
-
-##  Próximos pasos
-Seguir aprendiendo sobre:  
-- Ciberdefensa en entornos corporativos  
-- Seguridad ofensiva (pentesting avanzado)  
-- Respuesta a incidentes y forense digital
-- CompTIA security +
+**Otros**
+- Introducción a OSINT
+- Configuración de Firewall en Linux
+- Seguridad Digital con Perspectiva de Género
+- Python Nivel Jr.
 
 ---
 
-📧 **Contacto**: 004020@sg.edu.mx  
-🌐 **LinkedIn**: https://www.linkedin.com/in/areli-castillo-flores/
+## Enfoque Profesional
+
+Actualmente fortaleciendo habilidades en:
+
+- Detección y respuesta ante incidentes (Blue Team)
+- Seguridad en entornos corporativos
+- Seguridad ofensiva avanzada
+- Preparación para CompTIA Security+
+
+---
+
+## Objetivo Profesional
+
+Desarrollarme en un entorno corporativo de ciberseguridad, contribuyendo en monitoreo, análisis de amenazas y mejora continua de postura de seguridad.
+
+
+
