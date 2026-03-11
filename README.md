@@ -99,8 +99,6 @@ Actualmente fortaleciendo habilidades en:
 
 ---
 
-## Objetivo Profesional
-
 Desarrollarme en un entorno corporativo de ciberseguridad, contribuyendo en monitoreo, análisis de amenazas y mejora continua de postura de seguridad.
 
 
