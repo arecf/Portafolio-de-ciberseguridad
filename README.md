@@ -54,7 +54,7 @@ Este repositorio documenta proyectos prácticos, laboratorios técnicos y análi
 -  [Escaneo de redes con Nmap](proyectos/nmap.md)  
 -  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)
--  [Posible Compromiso de Cuenta](./proyectos/Posible%20Compromiso%20de%20Cuenta%20con%20Env%C3%ADo%20de%20Adjuntos%20Cifrados.md)
+-  [Posible Compromiso de Cuenta](proyectos/Posible-Compromiso-de-Cuenta-con-Envío-de-Adjuntos-Cifrados.md)
 -  [Update Despliegue Seguro de Instancia EC2 en AWS](proyectos/aws-ec2-security-groups.md)
 
 
