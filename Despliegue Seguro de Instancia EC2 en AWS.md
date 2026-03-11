@@ -1,4 +1,4 @@
-#  Lab 01 — Despliegue Seguro de Instancia EC2 en AWS
+#  Lab — Despliegue Seguro de Instancia EC2 en AWS
 
 > **Área:** Cloud Security / AWS Fundamentals  
 > **Fecha:** Marzo 2026  
