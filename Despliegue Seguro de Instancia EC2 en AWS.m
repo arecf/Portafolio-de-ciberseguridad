@@ -1,13 +1,13 @@
-# 🛡️ Lab 01 — Despliegue Seguro de Instancia EC2 en AWS
+#  Lab 01 — Despliegue Seguro de Instancia EC2 en AWS
 
 > **Área:** Cloud Security / AWS Fundamentals  
 > **Fecha:** Marzo 2026  
 > **Nivel:** Fundamentos  
-> **Estado:** ✅ Completado
+> **Estado:**  Completado
 
 ---
 
-## 📋 Descripción del Lab
+##  Descripción del Lab
 
 En este laboratorio práctico configuré y desplegué una instancia **EC2 en Amazon Web Services**, aplicando buenas prácticas de seguridad desde el inicio mediante la configuración de **Security Groups** con reglas de acceso controlado para los protocolos HTTP, HTTPS y SSH.
 
@@ -15,7 +15,7 @@ El objetivo principal fue entender cómo funciona el modelo de seguridad perimet
 
 ---
 
-## 🎯 Objetivos de Aprendizaje
+##  Objetivos de Aprendizaje
 
 - [x] Lanzar una instancia EC2 desde la consola de AWS
 - [x] Entender los tipos de instancias y sus casos de uso
@@ -26,7 +26,7 @@ El objetivo principal fue entender cómo funciona el modelo de seguridad perimet
 
 ---
 
-## 🧰 Tecnologías y Servicios Usados
+##  Tecnologías y Servicios Usados
 
 | Servicio/Herramienta | Uso |
 |---|---|
@@ -38,7 +38,7 @@ El objetivo principal fue entender cómo funciona el modelo de seguridad perimet
 
 ---
 
-## 🚀 Pasos del Lab — Con Evidencia
+##  Pasos del Lab — Con Evidencia
 
 ### 1. Lanzamiento de la Instancia EC2
 
@@ -49,7 +49,7 @@ Desde la consola de AWS, lancé una instancia con las siguientes especificacione
 - **Tipo:** `t3.micro`
 - **Región:** us-east-1f (N. Virginia)
 - **IP Pública:** 100.55.153.105
-- **Estado:** ✅ En ejecución — 3/3 comprobaciones superadas
+- **Estado:**  En ejecución — 3/3 comprobaciones superadas
 
 ![Instancia EC2 en ejecución](aws3.PNG)
 *Panel de EC2 mostrando la instancia "TEST SERVIDOR" activa y pasando todos los health checks*
@@ -114,7 +114,7 @@ Confirmé que el servidor web es accesible públicamente a través del puerto **
 
 ---
 
-## 🔐 Configuración de Security Groups
+##  Configuración de Security Groups
 
 Los Security Groups actúan como un **firewall stateful** que controla el tráfico entrante y saliente de la instancia.
 
@@ -126,7 +126,7 @@ Los Security Groups actúan como un **firewall stateful** que controla el tráfi
 | HTTP | TCP | 80 | 0.0.0.0/0 | Tráfico web — verificado en captura |
 | HTTPS | TCP | 443 | 0.0.0.0/0 | Tráfico web cifrado (TLS) |
 
-### ⚠️ Decisiones de Seguridad Tomadas
+### Decisiones de Seguridad Tomadas
 
 - **SSH restringido a mi IP:** Limité el puerto 22 a mi dirección IP específica (`/32`), evitando ataques de fuerza bruta desde internet. Exponer SSH al mundo (`0.0.0.0/0`) es uno de los errores más comunes y peligrosos en instancias cloud.
 - **Autenticación por clave `.pem`:** En lugar de contraseña, se usa criptografía asimétrica — significativamente más seguro.
@@ -134,7 +134,7 @@ Los Security Groups actúan como un **firewall stateful** que controla el tráfi
 
 ---
 
-## 💡 Conceptos Clave Aprendidos
+##  Conceptos Clave Aprendidos
 
 ### ¿Qué es un Security Group?
 Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de entrada, la respuesta sale automáticamente sin regla outbound adicional. Por defecto **bloquea todo el tráfico entrante**.
@@ -143,9 +143,9 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 | | HTTP (Puerto 80) | HTTPS (Puerto 443) |
 |---|---|---|
-| Cifrado | ❌ No | ✅ Sí (TLS/SSL) |
+| Cifrado | ❌ No |  Sí (TLS/SSL) |
 | Datos en tránsito | Visibles | Cifrados |
-| Evidencia en lab | ✅ "No es seguro" | Próximo paso |
+| Evidencia en lab |  "No es seguro" | Próximo paso |
 
 ### IPs Pública vs Privada
 - **IP Privada** (`172.31.x.x`): Comunicación interna dentro de la VPC
@@ -153,7 +153,7 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 ---
 
-## 🔍 Reflexión de Seguridad
+##  Reflexión de Seguridad
 
 > El puerto **SSH (22) abierto al mundo** es uno de los vectores de ataque más explotados en instancias cloud. Los bots escanean internet constantemente buscando este puerto.
 >
@@ -161,7 +161,7 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 ---
 
-## 📚 Recursos y Referencias
+##  Recursos y Referencias
 
 - [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/)
 - [Security Groups Best Practices](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html)
@@ -170,7 +170,7 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 ---
 
-## 🗺️ Próximos Pasos
+##  Próximos Pasos
 
 - [ ] Instalar certificado TLS con Let's Encrypt (HTTP → HTTPS)
 - [ ] Configurar IAM Roles con principio de menor privilegio
@@ -181,4 +181,4 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 ---
 
-*Lab realizado como parte de mi proceso de aprendizaje activo en Cloud Security. 🚀*
+*Lab realizado como parte de mi proceso de aprendizaje activo en Cloud Security. *
