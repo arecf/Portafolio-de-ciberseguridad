@@ -17,12 +17,12 @@ El objetivo principal fue entender cómo funciona el modelo de seguridad perimet
 
 ##  Objetivos de Aprendizaje
 
-- [x] Lanzar una instancia EC2 desde la consola de AWS
-- [x] Entender los tipos de instancias y sus casos de uso
-- [x] Configurar Security Groups como firewall virtual
-- [x] Aplicar el principio de **menor privilegio** en reglas de red
-- [x] Conectarse vía SSH con autenticación por clave `.pem`
-- [x] Verificar conectividad HTTP desde el navegador
+-  Lanzar una instancia EC2 desde la consola de AWS
+-  Entender los tipos de instancias y sus casos de uso
+-  Configurar Security Groups como firewall virtual
+-  Aplicar el principio de **menor privilegio** en reglas de red
+-  Conectarse vía SSH con autenticación por clave `.pem`
+-  Verificar conectividad HTTP desde el navegador
 
 ---
 
@@ -51,7 +51,8 @@ Desde la consola de AWS, lancé una instancia con las siguientes especificacione
 - **IP Pública:** 100.55.153.105
 - **Estado:**  En ejecución — 3/3 comprobaciones superadas
 
-![Instancia EC2 en ejecución](aws3.PNG)
+<img width="1913" height="518" alt="aws3" src="https://github.com/user-attachments/assets/d9b2588a-3032-48a2-940c-85530a09b2cb" />
+
 *Panel de EC2 mostrando la instancia "TEST SERVIDOR" activa y pasando todos los health checks*
 
 ---
@@ -65,7 +66,8 @@ Configuración de red asignada por AWS:
 - **IP Pública:** `100.55.153.105` (acceso externo)
 - **DNS Público:** `ec2-100-55-153-105.compute-1.amazonaws.com`
 
-![Detalles de la instancia EC2](aws4.PNG)
+<img width="723" height="492" alt="aws4" src="https://github.com/user-attachments/assets/09e553c4-755c-40bc-aef0-c803bd709e9c" />
+
 *Resumen completo de la instancia: IPs pública/privada, DNS y estado de ejecución*
 
 ---
@@ -81,7 +83,8 @@ ssh -i PARDECLAVES.pem ubuntu@ec2-100-55-153-105.compute-1.amazonaws.com
 
 El servidor presentó su **fingerprint ED25519** para verificación de identidad, confirmé la autenticidad del host y establecí la conexión exitosamente.
 
-![Conexión SSH exitosa](git2.PNG)
+<img width="580" height="371" alt="git2" src="https://github.com/user-attachments/assets/73c3e6b4-64bc-42f9-bffd-c80c727b321f" />
+
 *Conexión SSH establecida: verificación de fingerprint ED25519 y acceso a Ubuntu 24.04 LTS en AWS*
 
 ---
@@ -98,7 +101,8 @@ Una vez dentro del servidor, el sistema reportó su estado en tiempo real:
 | Procesos activos | 110 |
 | IPv4 (interfaz ens5) | 172.31.66.56 |
 
-![Terminal SSH - Ubuntu en EC2](aws2.PNG)
+<img width="947" height="318" alt="aws2" src="https://github.com/user-attachments/assets/a9bd774a-d44f-4d3c-9d0b-12c6efe3bf6f" />
+
 *Vista desde AWS CloudShell: Ubuntu 24.04.3 LTS corriendo en la instancia EC2*
 
 ---
@@ -107,7 +111,8 @@ Una vez dentro del servidor, el sistema reportó su estado en tiempo real:
 
 Confirmé que el servidor web es accesible públicamente a través del puerto **80 (HTTP)** desde el navegador:
 
-![Servidor web accesible vía HTTP](aws.PNG)
+<img width="770" height="289" alt="aws" src="https://github.com/user-attachments/assets/bf2140af-1243-448c-8de5-88f30d61d6b7" />
+
 *Servidor respondiendo en `http://100.55.153.105` — deploy funcional desde EC2*
 
 > **Nota de seguridad:** El navegador muestra "No es seguro" porque se usa HTTP en lugar de HTTPS. El siguiente paso es instalar un certificado TLS/SSL (Let's Encrypt) para cifrar el tráfico por el puerto 443.
@@ -143,7 +148,7 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 
 | | HTTP (Puerto 80) | HTTPS (Puerto 443) |
 |---|---|---|
-| Cifrado | ❌ No |  Sí (TLS/SSL) |
+| Cifrado |  No |  Sí (TLS/SSL) |
 | Datos en tránsito | Visibles | Cifrados |
 | Evidencia en lab |  "No es seguro" | Próximo paso |
 
@@ -169,16 +174,3 @@ Firewall virtual a nivel de instancia. Es **stateful**: si permites tráfico de 
 - [Let's Encrypt — TLS gratuito](https://letsencrypt.org/)
 
 ---
-
-##  Próximos Pasos
-
-- [ ] Instalar certificado TLS con Let's Encrypt (HTTP → HTTPS)
-- [ ] Configurar IAM Roles con principio de menor privilegio
-- [ ] Implementar AWS CloudTrail para auditoría de accesos
-- [ ] Practicar con VPCs, subredes públicas/privadas y NAT Gateways
-- [ ] Explorar AWS GuardDuty para detección de amenazas
-- [ ] **Meta:** Certificación AWS Cloud Practitioner → AWS Security Specialty
-
----
-
-*Lab realizado como parte de mi proceso de aprendizaje activo en Cloud Security. *
