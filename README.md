@@ -51,7 +51,6 @@ Este repositorio documenta proyectos prácticos, laboratorios técnicos y análi
 ## Proyectos Técnicos
 
 -  [Análisis de tráfico con Wireshark](proyectos/wireshark.md)  
--  [Escaneo de redes con Nmap](proyectos/nmap.md)  
 -  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)
 -  [Posible Compromiso de Cuenta](proyectos/Posible-Compromiso-de-Cuenta-con-Envío-de-Adjuntos-Cifrados.md)
