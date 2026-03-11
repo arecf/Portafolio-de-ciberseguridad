@@ -55,6 +55,7 @@ Este repositorio documenta proyectos prácticos, laboratorios técnicos y análi
 -  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)
 -  [Posible Compromiso de Cuenta](./proyectos/Posible%20Compromiso%20de%20Cuenta%20con%20Env%C3%ADo%20de%20Adjuntos%20Cifrados.md)
+-  Update Despliegue Seguro de Instancia EC2 en AWS.md 
 
 ---
 
