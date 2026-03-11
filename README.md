@@ -53,7 +53,7 @@ Este repositorio documenta proyectos prácticos, laboratorios técnicos y análi
 -  [Análisis de tráfico con Wireshark](proyectos/wireshark.md)  
 -  [Laboratorios OverTheWire](proyectos/OverTheWire) 
 -  [TryHackMe – Rooms completadas](proyectos/tryhackme.md)
--  [Posible Compromiso de Cuenta](proyectos/Posible-Compromiso-de-Cuenta-con-Envío-de-Adjuntos-Cifrados.md)
+-  [Posible Compromiso de Cuenta](proyectos/Posible-Compromiso-de-Cuenta-con-Envio-de-Adjuntos-Cifrados.md)
 -  [Update Despliegue Seguro de Instancia EC2 en AWS](proyectos/aws-ec2-security-groups.md)
 
 
